@@ -1,0 +1,259 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "t k",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "CaptureUserNameIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "My name is {name}",
+            "My name is Jeff"
+          ]
+        },
+        {
+          "name": "CaptureUserAgeIntent",
+          "slots": [
+            {
+              "name": "age",
+              "type": "AMAZON.EducationalOrganization"
+            }
+          ],
+          "samples": [
+            "I am in {age}"
+          ]
+        },
+        {
+          "name": "CaptureUserGenderIntent",
+          "slots": [
+            {
+              "name": "gender",
+              "type": "AMAZON.Anaphor"
+            }
+          ],
+          "samples": [
+            "I am a {gender}"
+          ]
+        },
+        {
+          "name": "CaptureUserRaceIntent",
+          "slots": [
+            {
+              "name": "race",
+              "type": "AMAZON.Color"
+            }
+          ],
+          "samples": [
+            "skip",
+            "I am {race}"
+          ]
+        },
+        {
+          "name": "CaptureUserOppIntent",
+          "slots": [
+            {
+              "name": "opportunity",
+              "type": "AMAZON.Service"
+            }
+          ],
+          "samples": [
+            "I am looking for an {opportunity} opportunity",
+            "I am looking for a {opportunity} opportunity",
+            "I am looking for {opportunity}"
+          ]
+        },
+        {
+          "name": "CaptureUserSaveIntent",
+          "slots": [],
+          "samples": [
+            "Number one"
+          ]
+        },
+        {
+          "name": "GetOppIntent",
+          "slots": [],
+          "samples": [
+            "Get my opportunities"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CaptureUserNameIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1502923896438.1413025820088"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CaptureUserAgeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "age",
+              "type": "AMAZON.EducationalOrganization",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1296474379423.992922941847"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CaptureUserGenderIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "gender",
+              "type": "AMAZON.Anaphor",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "CaptureUserRaceIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "race",
+              "type": "AMAZON.Color",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "CaptureUserOppIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "opportunity",
+              "type": "AMAZON.Service",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.231112240721.1232179316654"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1502923896438.1413025820088",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your name?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1296474379423.992922941847",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you in elementary school, middle school, high school, or college?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.951743594869.1336334465753",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What gender are you?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.12922505384.1270149106357",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your race?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.968555793787.753266936677",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What opportunity are you looking for?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.231112240721.1232179316654",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you looking for a mentorship, scholarship, learning, or internship?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.128163119634.1489052176923",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What race do you identify with?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What gender do you identify with?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "37"
+}
